@@ -246,4 +246,9 @@ public class TST_LargeSteamForgeHammer extends TST_SteamMultiMachineBase<TST_Lar
         return false;
     }
 
+    @Override
+    public int getThemeTier() {
+        return steamCasingTier;
+    }
+
 }

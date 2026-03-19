@@ -27,6 +27,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.gen.ChunkProviderServer;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.jetbrains.annotations.NotNull;
@@ -56,6 +57,8 @@ import gregtech.api.util.GTUtility;
 import gregtech.api.util.HatchElementBuilder;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.shutdown.ShutDownReasonRegistry;
+import galacticgreg.api.enums.DimensionDef.DimNames;
+import galacticgreg.api.enums.DimensionDef;
 
 public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> {
 
@@ -360,8 +363,9 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
     protected void initDropMap() {
         this.dropMap = new VoidMinerUtility.DropMap();
         this.extraDropMap = new VoidMinerUtility.DropMap();
-        int id = this.getBaseMetaTileEntity()
-            .getWorld().provider.dimensionId;
+        // int id = this.getBaseMetaTileEntity()
+        //     .getWorld().provider.dimensionId;
+        String id = DimensionDef.getDimensionName(getBaseMetaTileEntity().getWorld());
         this.handleModDimDef(id);
         this.handleExtraDrops(id);
         this.totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
@@ -372,10 +376,10 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
      *
      * @param id the dim number
      */
-    private void handleModDimDef(int id) {
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            this.dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
-        } else {
+    private void handleModDimDef(String id) {
+        if (VoidMinerUtility.dropMapsByDimName.containsKey(id)) {
+            this.dropMap = VoidMinerUtility.dropMapsByDimName.get(id);
+        } /*else {
             String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
                 .getWorld()
                 .getChunkProvider()).currentChunkProvider.getClass()
@@ -384,7 +388,7 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
             if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
                 this.dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
             }
-        }
+        }*/
     }
 
     /**
@@ -392,9 +396,9 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
      *
      * @param id the specified dim id
      */
-    private void handleExtraDrops(int id) {
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
+    private void handleExtraDrops(String id) {
+        if (VoidMinerUtility.extraDropsByDimName.containsKey(id)) {
+            extraDropMap = VoidMinerUtility.extraDropsByDimName.get(id);
         }
     }
 

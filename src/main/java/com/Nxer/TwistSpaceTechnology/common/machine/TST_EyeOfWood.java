@@ -23,6 +23,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.gen.ChunkProviderServer;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -58,6 +59,8 @@ import gregtech.api.util.GTUtility;
 import gregtech.api.util.HatchElementBuilder;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.shutdown.ShutDownReason;
+import galacticgreg.api.enums.DimensionDef.DimNames;
+import galacticgreg.api.enums.DimensionDef;
 
 public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
 
@@ -395,13 +398,14 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     protected void initDropMap() {
         dropMap = new VoidMinerUtility.DropMap();
         extraDropMap = new VoidMinerUtility.DropMap();
-        WorldProvider worldProvider = this.getBaseMetaTileEntity()
-            .getWorld().provider;
-        int dimensionId = worldProvider.dimensionId;
-        if (isPersonalSpace(worldProvider) && ALLOW_PERSONAL_SPACE) {
+        // WorldProvider worldProvider = this.getBaseMetaTileEntity()
+        //     .getWorld().provider;
+        // int dimensionId = worldProvider.dimensionId;
+        String dimensionId = DimensionDef.getDimensionName(getBaseMetaTileEntity().getWorld());
+        /*if (isPersonalSpace(worldProvider) && ALLOW_PERSONAL_SPACE) {
             // override to use overworld dimension data.
-            dimensionId = 0;
-        }
+            dimensionId = "OW";
+        }*/
         handleModDimDef(dimensionId);
         handleExtraDrops(dimensionId);
         totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
@@ -433,12 +437,12 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     /**
      * Gets the DropMap of the dim for the specified dim id
      *
-     * @param id the dim number
+     * @param id the dim string
      */
-    private void handleModDimDef(int id) {
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
-        } else {
+    private void handleModDimDef(String id) {
+        if (VoidMinerUtility.dropMapsByDimName.containsKey(id)) {
+            dropMap = VoidMinerUtility.dropMapsByDimName.get(id);
+        } /*else {
             String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
                 .getWorld()
                 .getChunkProvider()).currentChunkProvider.getClass()
@@ -447,7 +451,7 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
             if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
                 dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
             }
-        }
+        }*/
     }
 
     /**
@@ -455,9 +459,9 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
      *
      * @param id the specified dim id
      */
-    private void handleExtraDrops(int id) {
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
+    private void handleExtraDrops(String id) {
+        if (VoidMinerUtility.extraDropsByDimName.containsKey(id)) {
+            extraDropMap = VoidMinerUtility.extraDropsByDimName.get(id);
         }
     }
 

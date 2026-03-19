@@ -220,4 +220,11 @@ public class TST_LargeSteamAlloySmelter extends TST_SteamMultiMachineBase<TST_La
         return false;
     }
 
+    int tierMachineCasing = 2;//Steel tier
+
+    @Override
+    public int getThemeTier() {
+        return tierMachineCasing;
+    }
+
 }
