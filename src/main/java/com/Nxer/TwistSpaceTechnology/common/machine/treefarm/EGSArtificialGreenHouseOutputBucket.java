@@ -28,16 +28,16 @@ import com.Nxer.TwistSpaceTechnology.common.misc.TSTMath;
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.enums.ItemList;
 import gregtech.mixin.interfaces.accessors.IBlockStemAccessor;
-import ic2.api.crops.CropCard;
-import ic2.api.crops.Crops;
+//import ic2.api.crops.CropCard;
+//import ic2.api.crops.Crops;
 import ic2.core.Ic2Items;
-import ic2.core.crop.IC2Crops;
-import ic2.core.crop.TileEntityCrop;
+//import ic2.core.crop.IC2Crops;
+//import ic2.core.crop.TileEntityCrop;
 import kubatech.api.eig.EIGDropTable;
 
 public class EGSArtificialGreenHouseOutputBucket {
 
-    public static final IEGSBucketFactory factory = new EGSArtificialGreenHouseOutputBucket.Factory();
+    /*public static final IEGSBucketFactory factory = new EGSArtificialGreenHouseOutputBucket.Factory();
     public static final String NBT_IDENTIFIER = "GREENHOUSE";
     private static final int NUMBER_OF_DROPS_TO_SIMULATE = 1000;
 
@@ -78,7 +78,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      *
      * @return The nbt data for this bucket.
      */
-    public NBTTagCompound save() {
+    /*public NBTTagCompound save() {
         NBTTagCompound nbt = new NBTTagCompound();
         nbt.setString("type", this.getNBTIdentifier());
         if (this.seed != null) {
@@ -93,7 +93,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      *
      * @return an item stack representing the seeds in this bucket.
      */
-    public ItemStack getSeedStack() {
+    /*public ItemStack getSeedStack() {
         if (this.seed != null) {
             ItemStack copied = seed.copy();
             copied.stackSize = seedCount;
@@ -107,7 +107,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      *
      * @return gets the number of seeds in this bucket.
      */
-    public int getSeedCount() {
+    /*public int getSeedCount() {
         return seedCount;
     }
 
@@ -116,7 +116,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      *
      * @return The display name of the seed.
      */
-    public String getDisplayName() {
+    /*public String getDisplayName() {
         if (seed != null) {
             return seed.getDisplayName();
         }
@@ -141,7 +141,7 @@ public class EGSArtificialGreenHouseOutputBucket {
     /**
      * Updates the bucket to the latest seeds
      */
-    public void updateBucket(@NotNull TST_MegaTreeFarm greenhouse) {
+    /*public void updateBucket(@NotNull TST_MegaTreeFarm greenhouse) {
         // Abort is input if empty
         if (greenhouse.getControllerSlot() == null) return;
 
@@ -167,7 +167,7 @@ public class EGSArtificialGreenHouseOutputBucket {
         revalidate(greenhouse);
     }
 
-    private void createMoreSeeds(@NotNull TST_MegaTreeFarm greenhouse) {
+    /*private void createMoreSeeds(@NotNull TST_MegaTreeFarm greenhouse) {
         greenhouse.getControllerSlot().stackSize = 64;
 
         if (ItemList.IC2_Crop_Seeds.isStackEqual(greenhouse.getControllerSlot(), true, true)) {
@@ -182,14 +182,14 @@ public class EGSArtificialGreenHouseOutputBucket {
                 }
             }
         }
-    }
+    }*/
 
     /**
      * Returns true if the bucket can output items.
      *
      * @return true if the bucket is valid.
      */
-    public boolean isValid() {
+    /*public boolean isValid() {
         return this.seed != null && this.seedCount > 0 && this.isValid;
     }
 
@@ -198,7 +198,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      *
      * @return the identifier for this bucket type.
      */
-    protected String getNBTIdentifier() {
+    /*protected String getNBTIdentifier() {
         return NBT_IDENTIFIER;
     }
 
@@ -208,7 +208,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      * @param multiplier A multiplier to apply to the output.
      * @param tracker    The item drop tracker
      */
-    public void addProgress(double multiplier, EIGDropTable tracker) {
+    /*public void addProgress(double multiplier, EIGDropTable tracker) {
         if (!isValid()) return;
         drops.addTo(tracker, multiplier * this.seedCount);
     }
@@ -221,7 +221,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      * @return True if the bucket was successfully validated. {@link EGSArtificialGreenHouseOutputBucket#isValid()}
      *         should also return true.
      */
-    public boolean revalidate(TST_MegaTreeFarm greenhouse) {
+    /*public boolean revalidate(TST_MegaTreeFarm greenhouse) {
         recalculateDrops(greenhouse);
         return isValid();
     }
@@ -238,7 +238,7 @@ public class EGSArtificialGreenHouseOutputBucket {
         Item item = seed.getItem();
 
         // Ic2 check
-        if (ItemList.IC2_Crop_Seeds.isStackEqual(seed, true, true)) {
+        /*if (ItemList.IC2_Crop_Seeds.isStackEqual(seed, true, true)) {
             if (seed.hasTagCompound()) {
                 NBTTagCompound nbt = seed.getTagCompound();
                 if (nbt.hasKey("growth") && nbt.hasKey("gain") && nbt.hasKey("resistance")) {
@@ -294,9 +294,9 @@ public class EGSArtificialGreenHouseOutputBucket {
                     }
                 }
             }
-        }
+        }*/
 
-        if (item instanceof IPlantable plantable) {
+        /*if (item instanceof IPlantable plantable) {
             Block plantBlock = null;
 
             if (plantable instanceof ItemSeeds itemSeeds) {
@@ -418,7 +418,7 @@ public class EGSArtificialGreenHouseOutputBucket {
         }
 
         // Ic2 check
-        if (ItemList.IC2_Crop_Seeds.isStackEqual(seed, true, true)) {
+        /*if (ItemList.IC2_Crop_Seeds.isStackEqual(seed, true, true)) {
             if (seed.hasTagCompound()) {
                 NBTTagCompound nbt = seed.getTagCompound();
                 if (nbt.hasKey("growth") && nbt.hasKey("gain") && nbt.hasKey("resistance")) {
@@ -428,9 +428,9 @@ public class EGSArtificialGreenHouseOutputBucket {
                     }
                 }
             }
-        }
+        }*/
 
-        Item item = seed.getItem();
+        /*Item item = seed.getItem();
 
         if (item == Items.reeds) {
             return true;
@@ -472,7 +472,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      * @param cc The {@link CropCard} of the seed
      * @return The average number of drops to computer per harvest
      */
-    private static double getRealAverageDropRounds(TileEntityCrop te, CropCard cc) {
+    /*private static double getRealAverageDropRounds(TileEntityCrop te, CropCard cc) {
         // this should be ~99.995% accurate
         double chance = (double) cc.dropGainChance() * TSTMath.powInt(1.03, te.getGain());
         // this is essentially just performing an integration using the composite trapezoidal rule.
@@ -497,7 +497,7 @@ public class EGSArtificialGreenHouseOutputBucket {
      * @param cc The {@link CropCard} of the seed
      * @return The average number of drops to computer per harvest
      */
-    private static double getRealAverageDropIncrease(TileEntityCrop te, CropCard cc) {
+    /*private static double getRealAverageDropIncrease(TileEntityCrop te, CropCard cc) {
         // yes gain has the amazing ability to sometimes add 1 to your stack size!
         return (te.getGain() + 1) / 100.0d;
     }
@@ -621,5 +621,5 @@ public class EGSArtificialGreenHouseOutputBucket {
         public void setNutrientStorage(int weedExStorage) {}
 
         // endregion environment simulation
-    }
+    }*/
 }

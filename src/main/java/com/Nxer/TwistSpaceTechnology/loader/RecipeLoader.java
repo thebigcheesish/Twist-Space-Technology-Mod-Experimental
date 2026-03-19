@@ -25,8 +25,8 @@ import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.CrystalEssent
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.CrystallineInfinitierRecipePool;
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.DSPRecipePool;
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.DeployedNanoCoreRecipePool;
-import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe;
-import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.TreeGrowthSimulatorWithoutToolFakeRecipe;
+//import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe;
+//import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.TreeGrowthSimulatorWithoutToolFakeRecipe;
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.ElvenWorkshopRecipePool;
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.HyperSpacetimeTransformerRecipePool;
 import com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.IndustrialAlchemyTowerRecipePool;
@@ -123,7 +123,7 @@ public class RecipeLoader {
         CokingFactoryRecipePool.loadRecipes();
         StellarForgeRecipePool.loadRecipes();
         HyperSpacetimeTransformerRecipePool.loadRecipes();
-        AquaticZoneSimulatorFakeRecipe.loadRecipes();
+        //AquaticZoneSimulatorFakeRecipe.loadRecipes();
         NeutronActivatorWithEURecipePool.loadRecipes();
         MassFabricatorGenesisRecipePool.loadRecipes();
         MicroSpaceTimeFabricatorioRecipePool.loadRecipes();
@@ -163,7 +163,7 @@ public class RecipeLoader {
         hasLoadedRecipesServerStarted = true;
 
         StellarForgeRecipePool.loadOnServerStarted();
-        TreeGrowthSimulatorWithoutToolFakeRecipe.loadRecipes();
+        //TreeGrowthSimulatorWithoutToolFakeRecipe.loadRecipes();
         if (Config.Enable_IndustrialMagicMatrix) {
             new IndustrialMagicMatrixRecipePool().loadRecipes();
         }

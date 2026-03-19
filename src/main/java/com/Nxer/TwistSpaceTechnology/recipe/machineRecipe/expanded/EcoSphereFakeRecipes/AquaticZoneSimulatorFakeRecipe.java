@@ -1,6 +1,6 @@
 package com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes;
 
-import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.getItemStackString;
+//import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.getItemStackString;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ import gregtech.api.util.GTModHandler;
 
 public class AquaticZoneSimulatorFakeRecipe {
 
-    private static final Logger LOGGER = LogManager.getLogger(AquaticZoneSimulatorFakeRecipe.class);
+    /*private static final Logger LOGGER = LogManager.getLogger(AquaticZoneSimulatorFakeRecipe.class);
     static FluidStack WaterStack = Materials.Water.getFluid(10000);
     private static final ItemStack Offspring = GTCMItemList.OffSpring.get(1);
     public static ArrayList<ItemStack> WatersOutputs = new ArrayList<>();
@@ -134,5 +134,5 @@ public class AquaticZoneSimulatorFakeRecipe {
             .duration(20 * 5)
             .eut(0)
             .addTo(GTCMRecipe.AquaticZoneSimulatorFakeRecipes);
-    }
+    }*/
 }

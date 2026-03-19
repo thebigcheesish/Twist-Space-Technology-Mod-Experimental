@@ -1,8 +1,8 @@
 package com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes;
 
 import static com.Nxer.TwistSpaceTechnology.common.machine.MiscHelper.UnknowWater;
-import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.getModeMultiplier;
-import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.queryTreeProduct;
+//import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.getModeMultiplier;
+//import static com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm.queryTreeProduct;
 import static gtPlusPlus.xmod.gregtech.common.tileentities.machines.multi.production.MTETreeFarm.treeProductsMap;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import gtPlusPlus.xmod.gregtech.common.tileentities.machines.multi.production.MT
 
 public class TreeGrowthSimulatorWithoutToolFakeRecipe {
 
-    static FluidStack WaterStack = Materials.Water.getFluid(1000);
+    /*static FluidStack WaterStack = Materials.Water.getFluid(1000);
     static FluidStack TemporalLiquidStack = new FluidStack(FluidRegistry.getFluid("temporalfluid"), 100);
     static FluidStack DeathWaterStack = new FluidStack(FluidRegistry.getFluid("fluiddeath"), 1000);
     static FluidStack UUMatterStack = Materials.UUMatter.getFluid(500);
@@ -221,5 +221,5 @@ public class TreeGrowthSimulatorWithoutToolFakeRecipe {
             .duration(20 * 5)
             .eut(0)
             .addTo(GTCMRecipe.TreeGrowthSimulatorWithoutToolFakeRecipes);
-    }
+    }*/
 }

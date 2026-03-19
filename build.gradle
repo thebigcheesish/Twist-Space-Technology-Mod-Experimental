@@ -24,3 +24,9 @@ configurations.all {
 test {
     useJUnitPlatform()
 }
+
+afterEvaluate {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xmaxerrs" << "2000"
+    }
+}

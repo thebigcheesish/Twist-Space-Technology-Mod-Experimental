@@ -2,9 +2,9 @@ package com.Nxer.TwistSpaceTechnology.common.machine;
 
 import static com.Nxer.TwistSpaceTechnology.common.init.TstBlocks.MetaBlockCasing01;
 import static com.Nxer.TwistSpaceTechnology.common.machine.MiscHelper.UnknowWater;
-import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe.WatersChances;
-import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe.WatersOutputs;
-import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.TreeGrowthSimulatorWithoutToolFakeRecipe.allProducts;
+//import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe.WatersChances;
+//import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.AquaticZoneSimulatorFakeRecipe.WatersOutputs;
+//import static com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded.EcoSphereFakeRecipes.TreeGrowthSimulatorWithoutToolFakeRecipe.allProducts;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.BLUE_PRINT_INFO;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.ModName;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.StructureTooComplex;
@@ -108,7 +108,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     public TST_MegaTreeFarm(String aName) {
         super(aName);
     }
-
+    /*
     @Override
     public IMetaTileEntity newMetaEntity(IGregTechTileEntity aTileEntity) {
         return new TST_MegaTreeFarm(this.mName);
@@ -136,7 +136,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
          * 0 - Tree Growth Simulator
          * 1 - Aqua Zone Simulator
          * 2 - Green House Simulator
-         */
+
         return 3;
     }
 
@@ -501,7 +501,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     Q -> ofBlock...(tile.wood, 0, ...);
     R -> ofBlock...(tile.wood, 1, ...);
     S -> ofSpecialTileAdder(gregtech.api.metatileentity.BaseMetaPipeEntity, ...);
-    */
+
 
     private final String[][] shape = new String[][]{
         {"                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","              DDDDD              ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","              DDDDD              ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 "},
@@ -693,7 +693,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
 
     /**
      * Use the highest bonus from the original Recipe.
-     */
+
 
     public static int getModeMultiplier(Mode mode) {
         return switch (mode) {
@@ -804,7 +804,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
      * @param toConsume    A fluid stack of the fluid to consume.
      * @param drainPartial True to allow partial consumption.
      * @return True when all the fluid has been consumed.
-     */
+
     private boolean tryDrain(FluidStack toConsume, boolean drainPartial) {
 
         if (toConsume == null || toConsume.amount <= 0) return true;
@@ -1330,5 +1330,5 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
 
     // #tr GT5U.gui.text.Invalid_Seed
     // # Invalid Seed
-    // #zh_CN 无效种子
+    // #zh_CN 无效种子 */
 }

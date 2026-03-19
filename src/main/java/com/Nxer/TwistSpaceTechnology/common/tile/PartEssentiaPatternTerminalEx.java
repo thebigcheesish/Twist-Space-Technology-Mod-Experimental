@@ -17,17 +17,19 @@ import com.glodblock.github.inventory.gui.GuiType;
 import appeng.api.implementations.ICraftingPatternItem;
 import appeng.api.networking.crafting.ICraftingPatternDetails;
 import appeng.api.storage.data.IAEItemStack;
+import appeng.client.texture.CableBusTextures;
+import appeng.core.sync.GuiBridge;
 import appeng.tile.inventory.BiggerAppEngInventory;
 import appeng.tile.inventory.InvOperation;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.items.ItemEssence;
 
-public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
+/*public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
 
-    private static final FCPartsTexture FRONT_BRIGHT_ICON = FCPartsTexture.PartFluidPatternTerminal_Bright;
-    private static final FCPartsTexture FRONT_DARK_ICON = FCPartsTexture.PartFluidPatternTerminal_Colored;
-    private static final FCPartsTexture FRONT_COLORED_ICON = FCPartsTexture.PartFluidPatternTerminal_Dark;
+    private static final CableBusTextures FRONT_BRIGHT_ICON = CableBusTextures.PartPatternTerm_Bright;
+    private static final CableBusTextures FRONT_DARK_ICON = CableBusTextures.PartPatternTerm_Dark;
+    private static final CableBusTextures FRONT_COLORED_ICON = CableBusTextures.PartPatternTerm_Colored;
 
     public PartEssentiaPatternTerminalEx(ItemStack is) {
         super(is);
@@ -37,7 +39,7 @@ public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
     }
 
     @Override
-    public GuiType getGui() {
+    public GuiBridge getPatternGui() {
         return GuiType.FLUID_PATTERN_TERMINAL_EX;
     }
 
@@ -129,7 +131,7 @@ public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
      * - Accumulates identical aspects from multiple items to avoid duplicate crystal entries.
      * - Ensures that the total number of output ItemStacks does not exceed the original input array size.
      */
-    private ItemStack[] convertEssentiaInputs(IAEItemStack[] inputItems) {
+    /*private ItemStack[] convertEssentiaInputs(IAEItemStack[] inputItems) {
         ItemStack[] result = new ItemStack[inputItems.length];
         Map<Aspect, Integer> tempCrystals = new LinkedHashMap<>();
         int insertPos = 0;
@@ -208,17 +210,17 @@ public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
     }
 
     @Override
-    public FCPartsTexture getFrontBright() {
+    public CableBusTextures getFrontBright() {
         return FRONT_BRIGHT_ICON;
     }
 
     @Override
-    public FCPartsTexture getFrontColored() {
+    public CableBusTextures getFrontColored() {
         return FRONT_COLORED_ICON;
     }
 
     @Override
-    public FCPartsTexture getFrontDark() {
+    public CableBusTextures getFrontDark() {
         return FRONT_DARK_ICON;
     }
 
@@ -226,4 +228,4 @@ public class PartEssentiaPatternTerminalEx extends PartFluidPatternTerminalEx {
     public boolean isLightSource() {
         return false;
     }
-}
+}*/

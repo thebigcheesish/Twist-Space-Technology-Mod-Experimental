@@ -67,6 +67,7 @@ import gregtech.api.metatileentity.implementations.MTEHatchOutput;
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.recipe.check.CheckRecipeResultRegistry;
 import gregtech.api.render.TextureFactory;
+import gregtech.api.util.GTModHandler;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.shutdown.ShutDownReason;
 import gregtech.common.blocks.BlockCasings1;
@@ -101,7 +102,7 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
     private static final long explosionPower = V[1];
 
     private static final FluidStack waterFluid = Materials.Water.getFluid(1);
-    private static final FluidStack distilledWaterFluid = FluidUtils.getDistilledWater(1);
+    private static final FluidStack distilledWaterFluid = GTModHandler.getDistilledWater(1);
 
     private double heat = 0; // min - 0, max - 1
     private double calcification = 0; // min - 0, max - 1
@@ -166,7 +167,7 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
                 if (hasWater) {
                     liquidToDeplete = Materials.Water.getFluid(consumedWater);
                 } else {
-                    liquidToDeplete = FluidUtils.getDistilledWater(consumedWater);
+                    liquidToDeplete = GTModHandler.getDistilledWater(consumedWater);
                 }
 
                 if (super.depleteInput(liquidToDeplete)) {

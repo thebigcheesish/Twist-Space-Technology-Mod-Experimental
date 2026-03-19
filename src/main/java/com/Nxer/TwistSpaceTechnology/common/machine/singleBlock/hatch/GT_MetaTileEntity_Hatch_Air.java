@@ -20,6 +20,8 @@ import gregtech.api.util.GTUtility;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.MTEHatchFluidGenerator;
 import gtPlusPlus.xmod.gregtech.common.blocks.textures.TexturesGtBlock;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 public class GT_MetaTileEntity_Hatch_Air extends MTEHatchFluidGenerator {
 
     public GT_MetaTileEntity_Hatch_Air(final int aID, final String aName, final String aNameRegional, final int aTier) {
@@ -40,7 +42,7 @@ public class GT_MetaTileEntity_Hatch_Air extends MTEHatchFluidGenerator {
     public synchronized String[] getDescription() {
         mDescriptionArray[2] = FluidCapacity + " "
             + EnumChatFormatting.BLUE
-            + GTUtility.formatNumbers(getCapacity())
+            + formatNumber(getCapacity())
             + EnumChatFormatting.RESET
             + " L";
         final String[] hatchTierString = new String[] { HatchTier + " " + GTUtility.getColoredTierNameFromTier(mTier) };

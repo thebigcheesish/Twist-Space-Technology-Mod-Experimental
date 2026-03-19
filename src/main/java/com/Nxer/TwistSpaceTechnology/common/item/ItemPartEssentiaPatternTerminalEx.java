@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 import com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology;
 import com.Nxer.TwistSpaceTechnology.client.TstCreativeTabs;
-import com.Nxer.TwistSpaceTechnology.common.tile.PartEssentiaPatternTerminalEx;
+//import com.Nxer.TwistSpaceTechnology.common.tile.PartEssentiaPatternTerminalEx;
 import com.Nxer.TwistSpaceTechnology.util.TextEnums;
 
 import appeng.api.AEApi;
@@ -21,7 +21,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemPartEssentiaPatternTerminalEx extends net.minecraft.item.Item implements IPartItem {
+/*public class ItemPartEssentiaPatternTerminalEx extends net.minecraft.item.Item implements IPartItem {
 
     public ItemPartEssentiaPatternTerminalEx() {
         this.setMaxStackSize(64);
@@ -85,4 +85,4 @@ public class ItemPartEssentiaPatternTerminalEx extends net.minecraft.item.Item i
         list.add(TextEnums.tr("item.essentia.pattern.terminal.tooltip.2"));
         // spotless:on
     }
-}
+}*/
