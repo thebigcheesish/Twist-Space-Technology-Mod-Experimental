@@ -4,6 +4,7 @@ import static bartworks.API.BorosilicateGlass.ofBoroGlass;
 import static com.Nxer.TwistSpaceTechnology.common.modularizedMachine.ModularizedMachineLogic.ModularizedHatchElement.ExecutionCoreModule;
 import static com.Nxer.TwistSpaceTechnology.common.modularizedMachine.ModularizedMachineLogic.ModularizedHatchElement.ParallelController;
 import static com.Nxer.TwistSpaceTechnology.common.modularizedMachine.ModularizedMachineLogic.ModularizedHatchElement.PowerConsumptionController;
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofChain;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -110,7 +111,7 @@ public class MM_IndistinctTentaclePrototypeMK2
             return false;
         }
 
-        this.costEU = GTUtility.formatNumbers(costEU);
+        this.costEU = formatNumber(costEU);
         eMaxProgressingTime = 20;
 
         return true;
@@ -148,7 +149,7 @@ public class MM_IndistinctTentaclePrototypeMK2
         machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_COMPRESSING);
         machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_SEPARATOR);
         machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_PACKAGER);
-        machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_SLICING);
+        machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_BENDING);//This should be changed later to be better
     }
 
     @Override
@@ -362,7 +363,7 @@ public class MM_IndistinctTentaclePrototypeMK2
                             ParallelController,
                             PowerConsumptionController)
                         .adder(MM_IndistinctTentaclePrototypeMK2::addToMachineList)
-                        .dot(1)
+                        .hint(1)
                         .casingIndex(1024 + 12)
                         .buildAndChain(sBlockCasingsTT, 12))
                 .addElement('M', ofBlock(sBlockCasingsTT, 14))
@@ -371,7 +372,7 @@ public class MM_IndistinctTentaclePrototypeMK2
                     HatchElementBuilder.<MM_IndistinctTentaclePrototypeMK2>builder()
                         .atLeast(ExecutionCoreModule, ParallelController, PowerConsumptionController)
                         .adder(MM_IndistinctTentaclePrototypeMK2::addAnyModularHatchToMachineList)
-                        .dot(2)
+                        .hint(2)
                         .casingIndex(1024 + 13)
                         .buildAndChain(ofBlock(BlockQuantumGlass.INSTANCE, 0), ofBlock(sBlockCasingsTT, 13)))
                 .build();

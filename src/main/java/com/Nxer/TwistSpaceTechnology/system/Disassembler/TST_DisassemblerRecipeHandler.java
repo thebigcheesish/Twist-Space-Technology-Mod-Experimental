@@ -65,7 +65,7 @@ public class TST_DisassemblerRecipeHandler {
                         ItemList.Casing_Coil_Superconductor.get(1),
                         ItemList.Neutron_Reflector.get(2),
                         ItemList.Field_Generator_MV.get(2),
-                        GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4))
+                        GTOreDictUnificator.get(OrePrefixes.circuit, Materials.LuV, 4))
                     .setEut(480)
                     .setTier(GTUtility.getTier(480)));
 
@@ -79,7 +79,7 @@ public class TST_DisassemblerRecipeHandler {
                         getModItem(PamsHarvestCraft.ID, "wovencottonItem", 8, 0, missing),
                         GTOreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 8),
                         NHItemList.MeteoricIronString.get(8))
-                    .setOutputFluids(Materials.Silicone.getMolten(144))
+                    .setOutputFluids(Materials.RubberSilicone.getMolten(144))
                     .setEut(256)
                     .setTier(GTUtility.getTier(256)));
 

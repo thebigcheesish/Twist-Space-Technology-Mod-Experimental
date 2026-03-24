@@ -435,7 +435,7 @@ public class TST_DSPLauncher extends GTCM_MultiMachineBase<TST_DSPLauncher>
 						                                             .atLeast(InputBus, OutputBus, Energy.or(ExoticEnergy))
 						                                             .adder(TST_DSPLauncher::addToMachineList)
 						                                             .casingIndex(SPACE_ELEVATOR_BASE_CASING_INDEX)
-						                                             .dot(1)
+						                                             .hint(1)
 						                                             .buildAndChain(GregTechAPI.sBlockCasingsSE, 0))
 		                           .addElement('I', ofFrame(Materials.CosmicNeutronium))
 		                           .build();

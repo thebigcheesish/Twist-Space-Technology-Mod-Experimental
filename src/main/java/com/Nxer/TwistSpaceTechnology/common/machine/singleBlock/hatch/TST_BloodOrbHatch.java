@@ -4,6 +4,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -120,8 +122,9 @@ public class TST_BloodOrbHatch extends MTEHatchFluidGenerator {
 
     @Override
     public Fluid getFluidToGenerate() {
-        return FluidUtils.getFluidStack(AlchemicalWizardry.lifeEssenceFluid, 1)
-            .getFluid();
+        // return FluidUtils.getFluidStack(AlchemicalWizardry.lifeEssenceFluid, 1)
+        //     .getFluid();
+        return new FluidStack(AlchemicalWizardry.lifeEssenceFluid, 1).getFluid();
     }
 
     @Override
@@ -183,7 +186,8 @@ public class TST_BloodOrbHatch extends MTEHatchFluidGenerator {
         int maxDrainAmount = MathUtils.clamp(getCapacity() - getFluidAmount(), 0, getMaxCanDrainFromOrb());
         int drainedAmount = drainFromOrb(maxDrainAmount);
         if (drainedAmount > 0) {
-            super.fill(FluidUtils.getFluidStack(getFluidToGenerate(), drainedAmount), true);
+            //super.fill(FluidUtils.getFluidStack(getFluidToGenerate(), drainedAmount), true);
+            super.fill(new FluidStack(getFluidToGenerate(), drainedAmount), true);
             return true;
         }
 

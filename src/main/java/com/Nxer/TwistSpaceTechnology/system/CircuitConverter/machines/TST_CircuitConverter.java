@@ -170,7 +170,7 @@ public class TST_CircuitConverter extends GTCM_MultiMachineBase<TST_CircuitConve
             HatchElementBuilder.<TST_CircuitConverter>builder()
                 .atLeast(InputBus, OutputBus)
                 .adder(TST_CircuitConverter::addInputBusOrOutputBusToMachineList)
-                .dot(1)
+                .hint(1)
                 .casingIndex(16)
                 .buildAndChain(GregTechAPI.sBlockCasings2, 6))
         .build();

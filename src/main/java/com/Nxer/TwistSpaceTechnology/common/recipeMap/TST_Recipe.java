@@ -14,7 +14,7 @@ public class TST_Recipe extends GTRecipe {
             aInputs,
             aOutputs,
             aSpecialItems,
-            aChances,
+            aChances,null,null,null,
             aFluidInputs,
             aFluidOutputs,
             aDuration,

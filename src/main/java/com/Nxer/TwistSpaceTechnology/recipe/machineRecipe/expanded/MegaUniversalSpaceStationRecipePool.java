@@ -170,7 +170,7 @@ public class MegaUniversalSpaceStationRecipePool {
                 highDimensionalItem[2],
                 highDimensionalItem[4],
                 assembly,
-                Materials.DimensionallyTranscendentStellarCatalyst.getPlates(64),
+                Materials.DTSC.getPlates(64),
                 MaterialPool.entropyReductionProcess.getBridgeMaterial()
                     .getNanite(64),
                 MaterialPool.realSingularity.getBridgeMaterial()
@@ -318,7 +318,7 @@ public class MegaUniversalSpaceStationRecipePool {
                 GTCMItemList.RealSingularityNanoSwarm.get(4),
                 GTCMItemList.CoreOfT800.get(2))
             .fluidInputs(
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getFluid(144),
+                Materials.MHDCSM.getFluid(144),
                 MaterialPool.entropyReductionProcess.getMolten(1440),
                 MaterialPool.eventHorizonDiffusers.getMolten(1440),
                 MaterialPool.realSingularity.getMolten(144))
@@ -393,7 +393,7 @@ public class MegaUniversalSpaceStationRecipePool {
                 GTCMItemList.RealSingularityNanoSwarm.get(8),
                 ItemList.Circuit_TranscendentComputer.get(2))
             .fluidInputs(
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getFluid(144000),
+                Materials.MHDCSM.getFluid(144000),
                 MaterialPool.entropyReductionProcess.getMolten(14400000),
                 MaterialPool.eventHorizonDiffusers.getMolten(14400000),
                 MaterialPool.realSingularity.getMolten(144000))
@@ -614,7 +614,7 @@ public class MegaUniversalSpaceStationRecipePool {
         for (int i = 0; i < 10; i++) {
             GTValues.RA.stdBuilder()
                 .itemInputs(blockCasings[i], blockCasing6s[i], processor[Math.max(i - 3, 0)])
-                .fluidInputs(Materials.Plastic.getFluid(1440 * i))
+                .fluidInputs(Materials.Polyethylene.getFluid(1440 * i))
                 .itemOutputs(spaceStationStructureBlock[i])
 
                 .eut((int) (32 * Math.pow(4, i)))

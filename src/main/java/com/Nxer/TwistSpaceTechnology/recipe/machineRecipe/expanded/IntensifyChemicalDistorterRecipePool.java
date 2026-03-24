@@ -14,6 +14,7 @@ import static gregtech.api.enums.TierEU.RECIPE_ZPM;
 import static net.minecraftforge.fluids.FluidRegistry.getFluidStack;
 
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraft.item.ItemStack;
 
 import com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology;
 import com.Nxer.TwistSpaceTechnology.common.recipeMap.GTCMRecipe;
@@ -182,7 +183,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 Materials.Carbon.getDust(6))
             .fluidInputs(Materials.Hydrogen.getGas(12000), Materials.Water.getFluid(3000))
 
-            .fluidOutputs(Materials.Silicone.getMolten(1296))
+            .fluidOutputs(Materials.RubberSilicone.getMolten(1296))
             .specialValue(400)
             .eut(96)
             .duration(128)
@@ -197,7 +198,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTUtility.copyAmountUnsafe(64 * 6, Materials.Carbon.getDust(1))
             )
             .fluidInputs(Materials.Hydrogen.getGas(12000 * 64), Materials.Water.getFluid(3000 * 64))
-            .fluidOutputs(Materials.Silicone.getMolten(1296 * 64))
+            .fluidOutputs(Materials.RubberSilicone.getMolten(1296 * 64))
             .specialValue(800)
             .eut(96)
             .duration(128 * 64)
@@ -430,7 +431,8 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Lanthanum, 26),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Holmium, 17),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Samarium, 11),
-                WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                //WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                new ItemStack(WerkstoffLoader.items.get(OrePrefixes.dust), 11, 3),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Gadolinium, 6),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Terbium, 3),
                 GTUtility.copyAmountUnsafe(64 * 3, Materials.Silicon.getDust(1)),
@@ -467,7 +469,8 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Lanthanum, 26),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Holmium, 17),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Samarium, 11),
-                WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                //WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                new ItemStack(WerkstoffLoader.items.get(OrePrefixes.dust), 11, 3),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Gadolinium, 6),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Terbium, 3),
                 GTUtility.copyAmountUnsafe(64 * 3, Materials.Silicon.getDust(1)),
@@ -504,7 +507,8 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Lanthanum, 26),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Holmium, 17),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Samarium, 11),
-                WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                //WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                new ItemStack(WerkstoffLoader.items.get(OrePrefixes.dust), 11, 3),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Gadolinium, 6),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Terbium, 3),
                 GTUtility.copyAmountUnsafe(64 * 3, Materials.Silicon.getDust(1)),
@@ -542,7 +546,8 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Lanthanum, 26),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Holmium, 17),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Samarium, 11),
-                WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                //WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 11),
+                new ItemStack(WerkstoffLoader.items.get(OrePrefixes.dust), 11, 3),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Gadolinium, 6),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Terbium, 3),
                 GTUtility.copyAmountUnsafe(64 * 3, Materials.Silicon.getDust(1)),

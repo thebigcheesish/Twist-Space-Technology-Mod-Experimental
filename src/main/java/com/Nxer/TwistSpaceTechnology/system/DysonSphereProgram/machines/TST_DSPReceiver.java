@@ -38,6 +38,7 @@ import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DoNotN
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.infoText_CurrentPlanetCoefficient;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.infoText_CurrentStellarCoefficient;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textUseBlueprint;
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofChain;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -271,7 +272,7 @@ public class TST_DSPReceiver extends GTCM_MultiMachineBase<TST_DSPReceiver>
                     // #zh_CN 接收能源:
                     + TextEnums.tr("Waila.TST_DSPReceiver.1")
                     + EnumChatFormatting.GOLD
-                    + GTUtility.formatNumbers(tag.getLong("TickEU"))
+                    + formatNumber(tag.getLong("TickEU"))
                     + EnumChatFormatting.RESET
                     + " EU/t");
         }
@@ -598,7 +599,7 @@ public class TST_DSPReceiver extends GTCM_MultiMachineBase<TST_DSPReceiver>
 			                                                 .atLeast(InputBus, OutputBus)
 			                                                 .adder(TST_DSPReceiver::addToMachineList)
 			                                                 .casingIndex(SPACE_ELEVATOR_BASE_CASING_INDEX)
-			                                                 .dot(1)
+			                                                 .hint(1)
 			                                                 .buildAndChain(GregTechAPI.sBlockCasingsSE, 0)
                                    )
                                    .addElement('Q', ofFrame(Materials.NaquadahAlloy))

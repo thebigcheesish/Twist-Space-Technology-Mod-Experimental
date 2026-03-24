@@ -1201,7 +1201,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     // public ItemStack getHeldItem() {
     // return currentWeapon;
     // }
-    // }
+    // }*/
     @Override
     protected MultiblockTooltipBuilder createTooltip() {
         final MultiblockTooltipBuilder tt = new MultiblockTooltipBuilder();

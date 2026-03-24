@@ -6,6 +6,8 @@ import net.minecraft.util.StatCollector;
 
 import org.jetbrains.annotations.NotNull;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.util.GTUtility;
 
@@ -92,7 +94,7 @@ public class ResultInsufficientTier implements CheckRecipeResult {
         return StatCollector.translateToLocalFormatted(
             "tst.gui.text.insufficient_tier",
             StatCollector.translateToLocalFormatted("tst.gui.text.insufficient_tier." + typeRequired),
-            GTUtility.formatNumbers(tierRequired));
+            formatNumber(tierRequired));
     }
 
     @NotNull

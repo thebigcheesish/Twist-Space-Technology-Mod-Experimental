@@ -574,7 +574,7 @@ L -> ofBlock...(gt.blockcasingsTT, 12, ...); // Hatch
                                HatchElementBuilder.<TST_ArtificialStar>builder()
                                    .atLeast(InputBus, OutputBus)
                                    .adder(TST_ArtificialStar::addInputBusOrOutputBusToMachineList)
-                                   .dot(1)
+                                   .hint(1)
                                    .casingIndex(1024+12)
                                    .buildAndChain(sBlockCasingsTT, 12))
                    .build();

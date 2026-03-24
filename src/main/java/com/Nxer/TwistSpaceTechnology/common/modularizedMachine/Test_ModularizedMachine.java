@@ -234,7 +234,7 @@ public class Test_ModularizedMachine extends MultiExecutionCoreMachineSupportAll
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus, Energy.or(ExoticEnergy), AllModule)
                         .adder(Test_ModularizedMachine::addToMachineList)
                         .casingIndex(TstBlocks.MetaBlockCasing01.getTextureIndex(0))
-                        .dot(1)
+                        .hint(1)
                         .buildAndChain(tierBlockElement))
                 .build();
         }

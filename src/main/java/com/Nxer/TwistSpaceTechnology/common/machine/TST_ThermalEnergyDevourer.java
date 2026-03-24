@@ -80,7 +80,7 @@ public class TST_ThermalEnergyDevourer extends WirelessEnergyMultiMachineBase<TS
     @Override
     public void setMachineModeIcons() {
         machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_SEPARATOR);
-        machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_SLICING);
+        machineModeIcons.add(GTUITextures.OVERLAY_BUTTON_MACHINEMODE_BENDING);//This should be changed later to be better
     }
 
     @Override

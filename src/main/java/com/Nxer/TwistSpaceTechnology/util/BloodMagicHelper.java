@@ -7,6 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.Nxer.TwistSpaceTechnology.config.Config;
 
+import WayofTime.alchemicalWizardry.AlchemicalWizardry;
 import WayofTime.alchemicalWizardry.api.items.interfaces.IBloodOrb;
 import WayofTime.alchemicalWizardry.api.soulNetwork.SoulNetworkHandler;
 import WayofTime.alchemicalWizardry.common.items.ActivationCrystal;
@@ -101,7 +102,8 @@ public class BloodMagicHelper {
      */
     @Nullable
     public static FluidStack getLifeEssence(int amount) {
-        return FluidUtils.getFluidStack("lifeessence", amount);
+        //return FluidUtils.getFluidStack("lifeessence", amount);
+        return new FluidStack(AlchemicalWizardry.lifeEssenceFluid, amount);
     }
 
     /**

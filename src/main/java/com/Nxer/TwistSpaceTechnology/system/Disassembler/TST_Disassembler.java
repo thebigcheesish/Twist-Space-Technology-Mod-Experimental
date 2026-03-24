@@ -152,7 +152,7 @@ public class TST_Disassembler extends GTCM_MultiMachineBase<TST_Disassembler> {
                             .<TST_Disassembler>builder()
                             .atLeast(InputBus, OutputBus, OutputHatch)
                             .adder(TST_Disassembler::addToMachineList)
-                            .dot(1)
+                            .hint(1)
                             .casingIndex(1028)
                             .buildAndChain(sBlockCasingsTT, 4)
                     )

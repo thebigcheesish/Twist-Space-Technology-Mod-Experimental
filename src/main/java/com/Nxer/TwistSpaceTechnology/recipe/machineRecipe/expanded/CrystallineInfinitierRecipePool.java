@@ -58,7 +58,8 @@ public class CrystallineInfinitierRecipePool {
 
         // region Cubic Zirconia
         GTValues.RA.stdBuilder()
-            .itemInputs(WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 10))
+            //.itemInputs(WerkstoffMaterialPool.Zirconium.get(OrePrefixes.dust, 10))
+            .itemInputs(new ItemStack(WerkstoffLoader.items.get(OrePrefixes.dust), 10, 10))
             .fluidInputs(Materials.Oxygen.getGas(1000 * 20))
             .itemOutputs(WerkstoffLoader.CubicZirconia.get(OrePrefixes.gem, 30))
             .eut(RECIPE_HV)

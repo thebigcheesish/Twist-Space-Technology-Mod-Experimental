@@ -363,7 +363,7 @@ public class MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2
                     HatchElementBuilder.<MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2>builder()
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus, Energy.or(ExoticEnergy))
                         .adder(MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2::addNormalHatchToMachineList)
-                        .dot(1)
+                        .hint(1)
                         .casingIndex(1024)
                         .buildAndChain(sBlockCasingsBA0, 12))
                 .addElement('C', ofBlock(sBlockCasingsTT, 10))
@@ -374,7 +374,7 @@ public class MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2
                     HatchElementBuilder.<MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2>builder()
                         .atLeast(AllModule)
                         .adder(MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2::addModularHatchToMachineList)
-                        .dot(2)
+                        .hint(2)
                         .casingIndex(1036)
                         .buildAndChain(sBlockCasingsTT, 12))
                 .build();

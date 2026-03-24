@@ -205,7 +205,7 @@ public class MM_MassFabricatorGenesis extends ModularizedMachineSupportAllModule
                     HatchElementBuilder.<MM_MassFabricatorGenesis>builder()
                         .atLeast(InputBus, OutputHatch, Energy.or(ExoticEnergy), ParallelController)
                         .adder(MM_MassFabricatorGenesis::addToMachineList)
-                        .dot(1)
+                        .hint(1)
                         .casingIndex(1024)
                         .buildAndChain(sBlockCasingsBA0, 12))
                 .build();

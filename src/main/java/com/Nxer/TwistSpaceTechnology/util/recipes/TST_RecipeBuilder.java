@@ -87,7 +87,7 @@ public class TST_RecipeBuilder {
             inputItems,
             outputItems,
             null,
-            outputChance,
+            outputChance,null,null,null,
             inputFluids,
             outputFluids,
             duration,

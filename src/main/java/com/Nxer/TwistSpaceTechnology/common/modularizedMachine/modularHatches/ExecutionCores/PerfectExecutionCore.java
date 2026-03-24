@@ -1,6 +1,7 @@
 package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.ExecutionCores;
 
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -74,7 +75,7 @@ public class PerfectExecutionCore extends ExecutionCoreBase {
             return false;
         }
 
-        this.costEU = GTUtility.formatNumbers(costEU);
+        this.costEU = formatNumber(costEU);
         maxProgressingTime = 20;
 
         trySetActive();

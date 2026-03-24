@@ -42,6 +42,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -74,6 +75,7 @@ import com.gtnewhorizons.modularui.api.widget.Widget;
 import com.gtnewhorizons.modularui.common.widget.ButtonWidget;
 import com.gtnewhorizons.modularui.common.widget.FakeSyncWidget;
 
+import WayofTime.alchemicalWizardry.AlchemicalWizardry;
 import WayofTime.alchemicalWizardry.ModBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -536,7 +538,8 @@ public class TST_BloodyHell extends GTCM_MultiMachineBase<TST_BloodyHell> implem
     }
 
     protected static FluidStack getLifeEssenceFluidStack(int amount) {
-        return FluidUtils.getFluidStack("lifeessence", amount);
+        //return FluidUtils.getFluidStack("lifeessence", amount);
+        return new FluidStack(AlchemicalWizardry.lifeEssenceFluid, amount);
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.machines;
 
 import static com.Nxer.TwistSpaceTechnology.common.modularizedMachine.ModularizedMachineLogic.ModularizedHatchElement.PowerConsumptionController;
 import static com.Nxer.TwistSpaceTechnology.common.modularizedMachine.ModularizedMachineLogic.ModularizedHatchElement.SpeedController;
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlocksTiered;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -150,7 +151,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
         SpaceTimeMaintenanceConsumablesFluids = new Fluid[] {
             Materials.SpaceTime.getMolten(576).getFluid(),
             Materials.Universium.getMolten(96).getFluid(),
-            Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(16) .getFluid()
+            Materials.MHDCSM.getMolten(16) .getFluid()
         };
 
         ByproductFluids = new Fluid[][] {
@@ -921,7 +922,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
                     + EnumChatFormatting.GRAY
                     + " : "
                     + EnumChatFormatting.WHITE
-                    + GTUtility.formatNumbers(tag.getLong("powerConsumption"))
+                    + formatNumber(tag.getLong("powerConsumption"))
                     + " EU/t");
         }
     }
@@ -1323,7 +1324,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
                     HatchElementBuilder.<TST_StrangeMatterAggregator>builder()
                         .atLeast(OutputBus, OutputHatch, SpeedController, PowerConsumptionController)
                         .adder(TST_StrangeMatterAggregator::addToMachineList)
-                        .dot(1)
+                        .hint(1)
                         .casingIndex(1024)
                         .buildAndChain(ofBlock(sBlockCasingsBA0, 12)))
                 .addElement(
@@ -1333,7 +1334,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
                     HatchElementBuilder.<TST_StrangeMatterAggregator>builder()
                         .atLeast(InputHatch)
                         .adder(TST_StrangeMatterAggregator::addSpaceTimeMaintenanceConsumablesInputHatchToMachineList)
-                        .dot(3)
+                        .hint(3)
                         .casingIndex(1024)
                         .buildAndChain(ofBlock(sBlockCasingsBA0, 12)))
                 .addElement(
@@ -1342,7 +1343,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
                     HatchElementBuilder.<TST_StrangeMatterAggregator>builder()
                         .atLeast(InputBus, InputHatch)
                         .adder(TST_StrangeMatterAggregator::addToMachineList)
-                        .dot(2)
+                        .hint(2)
                         .casingIndex(1024)
                         .buildAndChain(ofBlock(sBlockCasingsBA0, 12)))
                 .addElement(
@@ -1352,7 +1353,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
                     HatchElementBuilder.<TST_StrangeMatterAggregator>builder()
                         .atLeast(InputBus)
                         .adder(TST_StrangeMatterAggregator::addCoreElementInputBusToMachineList)
-                        .dot(4)
+                        .hint(4)
                         .casingIndex(1024)
                         .buildAndChain(ofBlock(sBlockCasingsBA0, 12)))
                 .addElement(

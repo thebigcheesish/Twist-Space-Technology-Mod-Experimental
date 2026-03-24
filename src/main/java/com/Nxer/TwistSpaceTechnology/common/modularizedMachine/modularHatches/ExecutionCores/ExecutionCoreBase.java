@@ -26,6 +26,7 @@ import gregtech.api.interfaces.fluid.IFluidStore;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.interfaces.tileentity.IVoidable;
 import gregtech.api.logic.ProcessingLogic;
+import gregtech.api.util.GTUtility;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 
@@ -367,13 +368,13 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
     @Override
     public void setVoidingMode(VoidingMode mode) {}
 
-    @Override
-    public List<ItemStack> getItemOutputSlots(ItemStack[] toOutput) {
+    //@Override
+    /*public List<ItemStack> getItemOutputSlots(ItemStack[] toOutput) {
         if (mainMachine instanceof IVoidable m) {
             return m.getItemOutputSlots(toOutput);
         }
         return Collections.emptyList();
-    }
+    }*/
 
     @Override
     public List<? extends IFluidStore> getFluidOutputSlots(FluidStack[] toOutput) {
@@ -385,10 +386,10 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
 
     @Override
     public boolean canDumpItemToME() {
-        if (mainMachine instanceof IVoidable m) {
-            return m.canDumpItemToME();
-        }
-        return false;
+        // if (mainMachine instanceof IVoidable m) {
+        //     return m.canDumpItemToME();
+        // }
+        return Collections.emptyList();
     }
 
     @Override

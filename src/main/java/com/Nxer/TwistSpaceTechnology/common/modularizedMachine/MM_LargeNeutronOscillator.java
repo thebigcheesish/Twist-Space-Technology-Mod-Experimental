@@ -166,7 +166,7 @@ public class MM_LargeNeutronOscillator
                     HatchElementBuilder.<MM_LargeNeutronOscillator>builder()
                         .atLeast(AllModule)
                         .adder(MM_LargeNeutronOscillator::addModularHatchToMachineList)
-                        .dot(1)
+                        .hint(1)
                         .casingIndex(((BlockCasings4) GregTechAPI.sBlockCasings4).getTextureIndex(1))
                         .buildAndChain(GregTechAPI.sBlockCasings4, 1))
                 .addElement(
@@ -174,7 +174,7 @@ public class MM_LargeNeutronOscillator
                     HatchElementBuilder.<MM_LargeNeutronOscillator>builder()
                         .atLeast(Energy.or(ExoticEnergy))
                         .adder(MM_LargeNeutronOscillator::addNormalHatchToMachineList)
-                        .dot(2)
+                        .hint(2)
                         .casingIndex(((BlockCasings8) GregTechAPI.sBlockCasings8).getTextureIndex(7))
                         .buildAndChain(GregTechAPI.sBlockCasings8, 7))
                 .addElement(
@@ -182,7 +182,7 @@ public class MM_LargeNeutronOscillator
                     HatchElementBuilder.<MM_LargeNeutronOscillator>builder()
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus)
                         .adder(MM_LargeNeutronOscillator::addNormalHatchToMachineList)
-                        .dot(3)
+                        .hint(3)
                         .casingIndex(((BlockCasings8) GregTechAPI.sBlockCasings8).getTextureIndex(10))
                         .buildAndChain(GregTechAPI.sBlockCasings8, 10))
                 .addElement('D', ofBlock(sBlockCasingsTT, 0))
