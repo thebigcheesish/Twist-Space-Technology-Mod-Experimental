@@ -2922,8 +2922,8 @@ public class GT_TileEntity_IndustrialMagicMatrix extends GTCM_MultiMachineBase<G
                         ofBlock(magicCasing, 0),
                         ofTileAdder(GT_TileEntity_IndustrialMagicMatrix::addInfusionProvider, magicCasing, 0)))
                 .addElement('E', ofBlock(blockMetalDevice, 9))
-                .addElement('F', ofBlock(BloodyThaumium.getBlock(), 0))
-                .addElement('G', ofBlock(BloodyVoid.getBlock(), 0))
+                .addElement('F', ofBlock(BloodyThaumium.block, 0))
+                .addElement('G', ofBlock(BloodyVoid.block, 0))
                 .addElement(
                     'H',
                     ofBlock(ModBlocksHandler.BlockCrystalDeep.getLeft(), ModBlocksHandler.BlockCrystalDeep.getRight()))

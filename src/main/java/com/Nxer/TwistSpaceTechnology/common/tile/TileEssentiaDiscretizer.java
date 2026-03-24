@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper;
+//import com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper;
 //import com.glodblock.github.crossmod.thaumcraft.AspectUtil;
 
 import appeng.api.AEApi;
@@ -39,7 +39,7 @@ import appeng.me.cache.CraftingGridCache;
 import appeng.me.storage.MEInventoryHandler;
 import appeng.tile.grid.AENetworkTile;
 
-public class TileEssentiaDiscretizer extends AENetworkTile implements IPriorityHost, ICellContainer {
+/*public class TileEssentiaDiscretizer extends AENetworkTile implements IPriorityHost, ICellContainer {
 
     private final BaseActionSource ownActionSource = new MachineSource(this);
     private final EssentiaDiscretizingInventory essentiaInv = new EssentiaDiscretizingInventory();
@@ -307,7 +307,7 @@ public class TileEssentiaDiscretizer extends AENetworkTile implements IPriorityH
             } catch (Throwable t) {
                 // FMLLog.warning("FluidCraftingInventory.injectItems error: %s", t.getMessage());
                 return input;
-            }*/
+            }*//*
             return input;
         }
 
@@ -331,4 +331,4 @@ public class TileEssentiaDiscretizer extends AENetworkTile implements IPriorityH
             return StorageChannel.FLUIDS;
         }
     }
-}
+}*/

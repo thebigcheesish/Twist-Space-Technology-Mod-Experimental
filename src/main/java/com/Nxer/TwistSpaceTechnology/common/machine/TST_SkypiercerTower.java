@@ -6,9 +6,9 @@ import static com.Nxer.TwistSpaceTechnology.config.Config.Parallel_PerRing_Skypi
 import static com.Nxer.TwistSpaceTechnology.util.AspectLevelCalculator.BASE_DURATION;
 import static com.Nxer.TwistSpaceTechnology.util.AspectLevelCalculator.computeAspectLevel;
 import static com.Nxer.TwistSpaceTechnology.util.AspectLevelCalculator.computeAspectSynthesisTime;
-import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.createCrystal;
-import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.findCombinedAspectCached;
-import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.readAspectFromCrystal;
+//import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.createCrystal;
+//import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.findCombinedAspectCached;
+//import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.readAspectFromCrystal;
 import static com.Nxer.TwistSpaceTechnology.util.TSTStructureUtility.ofAccurateTile;
 import static com.Nxer.TwistSpaceTechnology.util.TSTStructureUtility.ofAccurateTileAdder;
 import static com.Nxer.TwistSpaceTechnology.util.TSTStructureUtility.ofAccurateTileExt;
@@ -96,7 +96,7 @@ import thaumicenergistics.common.blocks.BlockEnum;
 import thaumicenergistics.common.tiles.TileInfusionProvider;
 import vazkii.botania.common.block.ModBlocks;
 
-public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements IConstructable, ISurvivalConstructable {
+/*public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements IConstructable, ISurvivalConstructable {
 
     public TST_SkypiercerTower(int aID, String aName, String aNameRegional) {
         super(aID, aName, aNameRegional);
@@ -482,7 +482,7 @@ public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements I
 
     /**
      * === [MODE 2: CHALLENGE MODE] ===
-     */
+     *//*
     private @NotNull CheckRecipeResult processChallengeMode() {
         if (mTileInfusionProvider.isEmpty()) {
             return SimpleCheckRecipeResult.ofFailurePersistOnShutdown("No Infusion Provider found.");
@@ -549,7 +549,7 @@ public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements I
 
     /**
      * === [MODE 1: NORMAL MODE] ===
-     */
+     *//*
     private @NotNull CheckRecipeResult processNormalMode() {
         ArrayList<ItemStack> inputs = getStoredInputs();
         if (inputs.size() < 2) {
@@ -633,7 +633,7 @@ public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements I
 
     /**
      * === [MODE 0: OLD MODE] ===
-     */
+     *//*
     private @NotNull CheckRecipeResult processOldMode(ArrayList<ItemStack> tItemsList) {
         if (tItemsList.isEmpty()) return CheckRecipeResultRegistry.NO_RECIPE;
 
@@ -1055,4 +1055,4 @@ public class TST_SkypiercerTower extends MTETooltipMultiBlockBaseEM implements I
         return 0;
     }
 
-}
+}*/

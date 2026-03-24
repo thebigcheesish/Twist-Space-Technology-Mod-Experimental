@@ -16,18 +16,18 @@ import tectech.thing.metaTileEntity.hatch.MTEHatchWirelessDynamoMulti;
 public class GT_Hatch_InfiniteWirelessDynamoHatch extends MTEHatchWirelessDynamoMulti {
 
     // region Class Constructor
-    public GT_Hatch_InfiniteWirelessDynamoHatch(String aName, byte aTier, String[] aDescription,
+    public GT_Hatch_InfiniteWirelessDynamoHatch(String aName, byte aTier, int aAmp, String[] aDescription,
         ITexture[][][] aTextures) {
-        super(aName, aTier, aDescription, aTextures);
+        super(aName, aTier, aAmp, aDescription, aTextures);
     }
 
-    public GT_Hatch_InfiniteWirelessDynamoHatch(int aID, String aName, String aNameRegional, int aTier) {
-        super(aID, aName, aNameRegional, aTier);
+    public GT_Hatch_InfiniteWirelessDynamoHatch(int aID, String aName, String aNameRegional, int aTier, int aAmp) {
+        super(aID, aName, aNameRegional, aTier, aAmp);
     }
 
     @Override
     public MetaTileEntity newMetaEntity(IGregTechTileEntity aTileEntity) {
-        return new GT_Hatch_InfiniteWirelessDynamoHatch(mName, mTier, new String[] { "" }, mTextures);
+        return new GT_Hatch_InfiniteWirelessDynamoHatch(mName, mTier, 65536, new String[] { "" }, mTextures);
     }
 
     // endregion

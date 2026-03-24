@@ -2,7 +2,7 @@ package com.Nxer.TwistSpaceTechnology.recipe.machineRecipe.expanded;
 
 import static com.Nxer.TwistSpaceTechnology.util.AspectLevelCalculator.BASE_DURATION;
 import static com.Nxer.TwistSpaceTechnology.util.AspectLevelCalculator.computeAspectSynthesisTime;
-import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.createCrystal;
+//import static com.Nxer.TwistSpaceTechnology.util.ItemEssentiaHelper.createCrystal;
 import static gregtech.api.enums.TierEU.RECIPE_EV;
 
 import net.minecraft.item.ItemStack;
@@ -15,7 +15,7 @@ import thaumcraft.api.aspects.Aspect;
 
 public class CrystalEssentiaRecipePool {
 
-    public static void loadRecipes() {
+    /*public static void loadRecipes() {
         final IRecipeMap tower = GTCMRecipe.SkypiercerTower;
 
         for (Aspect aspect : Aspect.aspects.values()) {
@@ -26,7 +26,7 @@ public class CrystalEssentiaRecipePool {
         }
     }
 
-    private static void registerCrystallizedRecipe(IRecipeMap map, Aspect compA, Aspect compB, Aspect result) {
+    /*private static void registerCrystallizedRecipe(IRecipeMap map, Aspect compA, Aspect compB, Aspect result) {
         ItemStack inputA = createCrystal(compA).copy();
         ItemStack inputB = createCrystal(compB).copy();
         ItemStack output = createCrystal(result).copy();
@@ -39,6 +39,6 @@ public class CrystalEssentiaRecipePool {
             .eut(RECIPE_EV)
             .addTo(map);
 
-    }
+    }*/
 
 }

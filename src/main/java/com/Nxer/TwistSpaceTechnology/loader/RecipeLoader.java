@@ -135,7 +135,7 @@ public class RecipeLoader {
         DeployedNanoCoreRecipePool.loadRecipes();
         SimpleFurnaceFuelPool.loadRecipes();
         TCResearches.register();
-        CrystalEssentiaRecipePool.loadRecipes();
+        //CrystalEssentiaRecipePool.loadRecipes();
         MegaSolarPanelFactoryRecipePool.loadRecipes();
 
         StaticMiscs.init();

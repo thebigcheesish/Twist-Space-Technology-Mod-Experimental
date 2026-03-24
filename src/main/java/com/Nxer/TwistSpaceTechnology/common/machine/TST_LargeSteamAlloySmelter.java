@@ -120,7 +120,7 @@ public class TST_LargeSteamAlloySmelter extends TST_SteamMultiMachineBase<TST_La
     // endregion
 
     // region General
-    @Override
+    //@Override
     protected ITexture getFrontOverlay() {
         return TextureFactory.builder()
             .addIcon(Textures.BlockIcons.OVERLAY_FRONT_STEAM_ALLOY_SMELTER_MULTI)
@@ -128,7 +128,7 @@ public class TST_LargeSteamAlloySmelter extends TST_SteamMultiMachineBase<TST_La
             .build();
     }
 
-    @Override
+   // @Override
     protected ITexture getFrontOverlayActive() {
         return TextureFactory.builder()
             .addIcon(Textures.BlockIcons.OVERLAY_FRONT_STEAM_ALLOY_SMELTER_MULTI_ACTIVE)

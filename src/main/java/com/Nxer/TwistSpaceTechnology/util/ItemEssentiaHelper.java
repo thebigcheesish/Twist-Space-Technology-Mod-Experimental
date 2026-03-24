@@ -18,7 +18,7 @@ import thaumcraft.common.items.ItemCrystalEssence;
 //import thaumicenergistics.common.fluids.GaseousEssentia;
 //import thaumicenergistics.common.integration.tc.EssentiaConversionHelper;
 
-public class ItemEssentiaHelper {
+/*public class ItemEssentiaHelper {
 
     @Nullable
     public static IAEFluidStack getAeFluidStack(ItemStack stack) {
@@ -116,7 +116,7 @@ public class ItemEssentiaHelper {
         //long totalFluidLong = (long) fluidPerEssentia * (long) stack.getStackSize();
         //int totalFluid = totalFluidLong > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) totalFluidLong;
 
-        return AEFluidStack.create(new net.minecraftforge.fluids.FluidStack(gas, 1 /*totalFluid*/));
+        return AEFluidStack.create(new net.minecraftforge.fluids.FluidStack(gas, 1 /*totalFluid*//*));
     }
 
     @Nullable
@@ -174,7 +174,7 @@ public class ItemEssentiaHelper {
      * @param aspectA The first input factor
      * @param aspectB The second input factor
      * @return The synthesized result ; if they do not exist, return null
-     */
+     *//*
     @Nullable
     public static Aspect findCombinedAspect(Aspect aspectA, Aspect aspectB) {
         for (Aspect candidate : Aspect.aspects.values()) {
@@ -213,3 +213,4 @@ public class ItemEssentiaHelper {
     }
 
 }
+*/

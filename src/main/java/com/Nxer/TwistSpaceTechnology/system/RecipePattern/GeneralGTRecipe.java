@@ -57,7 +57,7 @@ public class GeneralGTRecipe extends CustomCraftRecipe {
                 : (FluidStack[]) Arrays.stream(recipe.mFluidOutputs)
                     .filter(Objects::nonNull)
                     .toArray(),
-            Arrays.stream(recipe.mChances)
+            Arrays.stream(recipe.mOutputChances)
                 .mapToDouble((num) -> (double) num / 10000.0)
                 .toArray(),
             null,

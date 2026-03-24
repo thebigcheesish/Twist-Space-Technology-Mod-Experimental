@@ -173,7 +173,7 @@ public class TST_LargeSteamForgeHammer extends TST_SteamMultiMachineBase<TST_Lar
         return tt;
     }
 
-    @Override
+    //@Override
     protected ITexture getFrontOverlay() {
         return TextureFactory.builder()
             .addIcon(Textures.BlockIcons.OVERLAY_FRONT_STEAM_HAMMER)
@@ -181,7 +181,7 @@ public class TST_LargeSteamForgeHammer extends TST_SteamMultiMachineBase<TST_Lar
             .build();
     }
 
-    @Override
+    //@Override
     protected ITexture getFrontOverlayActive() {
         return TextureFactory.builder()
             .addIcon(Textures.BlockIcons.OVERLAY_FRONT_STEAM_HAMMER_ACTIVE)

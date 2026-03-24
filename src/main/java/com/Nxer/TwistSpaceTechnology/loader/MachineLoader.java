@@ -62,14 +62,14 @@ import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaCraftingCenter;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaMacerator;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaSolarPanelFactory;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaStoneBreaker;
-import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm;
+//import com.Nxer.TwistSpaceTechnology.common.machine.TST_MegaTreeFarm;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_MicroSpaceTimeFabricatorio;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_MiracleDoor;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_NetherInterface;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_PrimordialDisjunctus;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_ProcessingArray;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_Scavenger;
-import com.Nxer.TwistSpaceTechnology.common.machine.TST_SkypiercerTower;
+//import com.Nxer.TwistSpaceTechnology.common.machine.TST_SkypiercerTower;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_SpaceApiary;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_StarcoreMiner;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_SuperWaterPurifier;
@@ -376,7 +376,7 @@ public final class MachineLoader {
                     TextEnums.tr("NameIndustrialMagnetarSeparator")));
         }
 
-        if (Config.Enable_MegaTreeFarm) {
+        /*if (Config.Enable_MegaTreeFarm) {
             GTCMItemList.MegaTreeFarm.set(
                 new TST_MegaTreeFarm(
                     19051,
@@ -385,7 +385,7 @@ public final class MachineLoader {
                     // # Eco-Sphere Growth Simulator
                     // #zh_CN 拟似生态圈
                     TextEnums.tr("NameMegaTreeFarm")));
-        }
+        }*/
 
         GTCMItemList.ExtremeCraftCenter
             .set(new TST_MegaCraftingCenter(19052, "NameExtremeCraftCenter", TextEnums.tr("NameExtremeCraftCenter")));
@@ -578,13 +578,13 @@ public final class MachineLoader {
                 new TST_PrimordialDisjunctus(19070, "PrimordialDisjunctus", TextEnums.tr("NamePrimordialDisjunctus")));
         }
 
-        if (Config.Enable_SkypiercerTower) {
+        /*if (Config.Enable_SkypiercerTower) {
             // #tr NameSkypiercerTower
             // # Skypiercer Tower
             // #zh_CN 穿云尖塔
             GTCMItemList.SkypiercerTower
                 .set(new TST_SkypiercerTower(19071, "NameSkypiercerTower", TextEnums.tr("NameSkypiercerTower")));
-        }
+        }*/
 
         if (Config.Enable_LaserMeteorMiner) {
             // #tr NameMeteorMiner
@@ -664,7 +664,7 @@ public final class MachineLoader {
                 18998,
                 "NameInfiniteWirelessDynamoHatch",
                 TextLocalization.NameInfiniteWirelessDynamoHatch,
-                14));
+                14,65536));
 
         GTCMItemList.ManaHatch.set(new TST_ManaHatch(18979, "NameManaHatch", TextLocalization.NameManaHatch, 9));
 

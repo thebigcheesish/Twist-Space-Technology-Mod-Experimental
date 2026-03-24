@@ -14,14 +14,14 @@ import net.minecraft.world.World;
 
 import com.Nxer.TwistSpaceTechnology.client.TstCreativeTabs;
 import com.Nxer.TwistSpaceTechnology.common.init.TstBlocks;
-import com.Nxer.TwistSpaceTechnology.common.tile.TileEssentiaDiscretizer;
+//import com.Nxer.TwistSpaceTechnology.common.tile.TileEssentiaDiscretizer;
 import com.Nxer.TwistSpaceTechnology.util.TextEnums;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockEssentiaDiscretizer extends Block {
+/*public class BlockEssentiaDiscretizer extends Block {
 
     public static final String MODID = "gtnhcommunitymod";
     public static final String NAME = "essentia_discretizer";
@@ -109,4 +109,4 @@ public class BlockEssentiaDiscretizer extends Block {
         }
 
     }
-}
+}*/

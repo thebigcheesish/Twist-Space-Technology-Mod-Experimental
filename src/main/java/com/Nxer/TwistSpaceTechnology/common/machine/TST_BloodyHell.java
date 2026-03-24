@@ -308,9 +308,9 @@ public class TST_BloodyHell extends GTCM_MultiMachineBase<TST_BloodyHell> implem
                 .addElement('A', ofBlock(TstBlocks.MetaBlockCasing01, 9))
                 .addElement('B', ofBlock(MetaBlockCasing02, 0))
                 .addElement('C', ofBlock(MetaBlockCasing02, 1))
-                .addElement('D', ofBlockAnyMeta(BlockList.BloodyIchorium.getBlock()))
-                .addElement('E', ofBlockAnyMeta(BlockList.BloodyThaumium.getBlock()))
-                .addElement('F', ofBlockAnyMeta(BlockList.BloodyVoid.getBlock()))
+                .addElement('D', ofBlockAnyMeta(BlockList.BloodyIchorium.block))
+                .addElement('E', ofBlockAnyMeta(BlockList.BloodyThaumium.block))
+                .addElement('F', ofBlockAnyMeta(BlockList.BloodyVoid.block))
                 .addElement(
                     'G',
                     ofChain(

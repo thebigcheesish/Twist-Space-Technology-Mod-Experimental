@@ -384,12 +384,12 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
         return Collections.emptyList();
     }
 
-    @Override
+    //@Override
     public boolean canDumpItemToME() {
         // if (mainMachine instanceof IVoidable m) {
         //     return m.canDumpItemToME();
         // }
-        return Collections.emptyList();
+        //return Collections.emptyList();
     }
 
     @Override
@@ -400,13 +400,13 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
         return false;
     }
 
-    @Override
+    /*@Override
     public List<ItemStack> getVoidOutputSlots() {
         if (mainMachine instanceof IVoidable m) {
             return m.getVoidOutputSlots();
         }
         return TstUtils.EMPTY_ITEMSTACK_LIST;
-    }
+    }*/
 
     // endregion
 

@@ -98,7 +98,7 @@ import mcp.mobius.waila.api.IWailaDataAccessor;
 
 import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 
-public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
+/*public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
 
     // region Class Constructor
     public TST_MegaTreeFarm(int aID, String aName, String aNameRegional) {
@@ -108,7 +108,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     public TST_MegaTreeFarm(String aName) {
         super(aName);
     }
-    /*
+
     @Override
     public IMetaTileEntity newMetaEntity(IGregTechTileEntity aTileEntity) {
         return new TST_MegaTreeFarm(this.mName);
@@ -132,10 +132,10 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
 
     @Override
     public int totalMachineMode() {
-        /*
-         * 0 - Tree Growth Simulator
-         * 1 - Aqua Zone Simulator
-         * 2 - Green House Simulator
+
+          //0 - Tree Growth Simulator
+          //1 - Aqua Zone Simulator
+          //2 - Green House Simulator
 
         return 3;
     }
@@ -502,7 +502,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     R -> ofBlock...(tile.wood, 1, ...);
     S -> ofSpecialTileAdder(gregtech.api.metatileentity.BaseMetaPipeEntity, ...);
 
-
+*//*
     private final String[][] shape = new String[][]{
         {"                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","              DDDDD              ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","             DDDDDDD             ","              DDDDD              ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 "},
         {"                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","               D D               ","             GGD DGG             ","            GGGD DGGG            ","           GGGHH HHGGG           ","           GGHSH HSHGG           ","          DDDHHH HHHDDD          ","                                 ","          DDDHHH HHHDDD          ","           GGHSH HSHGG           ","           GGGHH HHGGG           ","            GGGD DGGG            ","             GGD DGG             ","               D D               ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 ","                                 "},
@@ -693,7 +693,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
 
     /**
      * Use the highest bonus from the original Recipe.
-
+    *//*
 
     public static int getModeMultiplier(Mode mode) {
         return switch (mode) {
@@ -804,7 +804,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
      * @param toConsume    A fluid stack of the fluid to consume.
      * @param drainPartial True to allow partial consumption.
      * @return True when all the fluid has been consumed.
-
+    *//*
     private boolean tryDrain(FluidStack toConsume, boolean drainPartial) {
 
         if (toConsume == null || toConsume.amount <= 0) return true;
@@ -1201,7 +1201,7 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     // public ItemStack getHeldItem() {
     // return currentWeapon;
     // }
-    // }*/
+    // }*//*
     @Override
     protected MultiblockTooltipBuilder createTooltip() {
         final MultiblockTooltipBuilder tt = new MultiblockTooltipBuilder();
@@ -1331,4 +1331,4 @@ public class TST_MegaTreeFarm extends GTCM_MultiMachineBase<TST_MegaTreeFarm> {
     // #tr GT5U.gui.text.Invalid_Seed
     // # Invalid Seed
     // #zh_CN 无效种子 */
-}
+//}
