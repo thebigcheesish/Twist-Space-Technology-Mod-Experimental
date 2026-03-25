@@ -7,6 +7,7 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.UUID;
 
+import gregtech.api.interfaces.IOutputBus;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -218,6 +219,16 @@ public class PerfectExecutionCore extends ExecutionCoreBase {
     @Override
     public ITexture[] getTexturesInactive(ITexture aBaseTexture) {
         return new ITexture[] { aBaseTexture, TextureFactory.of(InactiveFace) };
+    }
+
+    @Override
+    public List<IOutputBus> getOutputBusses() {
+        return null;
+    }
+
+    @Override
+    public boolean canDumpItemToME(List<GTUtility.ItemId> outputs) {
+        return true;
     }
 
     // endregion

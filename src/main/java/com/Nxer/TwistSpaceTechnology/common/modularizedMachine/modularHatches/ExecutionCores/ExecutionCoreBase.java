@@ -385,12 +385,13 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
     }
 
     //@Override
-    public boolean canDumpItemToME() {
+    //public boolean canDumpItemToME() {
+      //  return true;
         // if (mainMachine instanceof IVoidable m) {
         //     return m.canDumpItemToME();
         // }
         //return Collections.emptyList();
-    }
+    //}
 
     @Override
     public boolean canDumpFluidToME() {
